@@ -1,5 +1,30 @@
 # PracticeAngularNode
 
+```sh
+#Actual commands used to generate this project.
+# Create a new Nx workspace
+npx create-nx-workspace@latest my-monorepo --preset=empty --packageManager=npm
+
+# Navigate to the workspace
+cd my-monorepo
+
+# Add Angular capabilities to the workspace
+npm install --save-dev @nrwl/angular
+
+# Add Node capabilities to the workspace
+npm install --save-dev @nrwl/node @nrwl/express
+
+# Create an Angular application
+nx g @nrwl/angular:app frontend --routing --style=scss
+
+# Create a Node.js/Express application
+nx g @nrwl/express:app backend --frontendProject=frontend
+
+# Install additional dependencies for the backend
+npm install express cors dotenv
+
+```
+
 <a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
 
 ✨ Your new, shiny [Nx workspace](https://nx.dev) is ready ✨.
